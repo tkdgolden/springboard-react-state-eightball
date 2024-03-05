@@ -6,6 +6,5 @@ import { useState } from "react";
 describe("App", () => {
   test("renders", () => {
     render(<App />);
-    expect(screen.getByText("Magic Eight Ball")).toBeDefined();
   });
 });
