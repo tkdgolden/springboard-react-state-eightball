@@ -1,25 +1,13 @@
-import { useState } from 'react'
 import './App.css'
+import './components/EightBall'
+import answerOptions from './answerOptions'
+import EightBall from './components/EightBall';
 
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
+const App = () => (
     <>
       <h1>Magic Eight Ball</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <EightBall answers={answerOptions} />
     </>
-  )
-}
+);
 
 export default App
